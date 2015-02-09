@@ -19,10 +19,11 @@ int main(int argc, char *argv[])
     /* supported parameters */
     char *str1 = "bootloader";
     char *str2 = "recovery";
+    char *str3 = "dnx";
 
-    if ( argc != 2 || ( strcmp(str1, argv[1]) != 0 && strcmp(str2, argv[1]) != 0) )
+    if ( argc != 2 || ( strcmp(str1, argv[1]) != 0 && strcmp(str2, argv[1]) != 0 && strcmp(str3, argv[1]) != 0) )
     {
-        printf("Usage: \"%s bootloader\" or \"%s recovery\"\n", argv[0], argv[0]);
+        printf("Usage: \t\"%s %s\"\n \t\"%s %s\"\n \t\"%s %s\"\n", argv[0], str1, argv[0], str2, argv[0], str3);
         return (EXIT_SUCCESS);
     }
 
