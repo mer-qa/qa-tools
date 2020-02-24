@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Script for setting max brightness
+dbus-send --system --type=method_call --print-reply --dest=com.nokia.mce /com/nokia/mce/request com.nokia.mce.request.set_config string:/system/osso/dsm/display/display_brightness variant:int32:100

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Script for setting 24h time format
+dconf write "/sailfish/i18n/lc_timeformat24h" \'24\'

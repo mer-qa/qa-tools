@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Script for setting first boot dconf values
+dconf write "/apps/jolla-startupwizard/reached_tutorial" true

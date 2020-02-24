@@ -12,6 +12,8 @@ INSTALLDIR = install -d
 
 # The directory to install tools
 sbindir = /usr/sbin
+# The directory to install oneshots
+oneshotdir = /usr/lib/oneshot.d
 
 .PHONY: all
 all: $(REBOOTTOOL)
@@ -23,6 +25,8 @@ $(REBOOTTOOL): $(REBOOTTOOL).c
 install:
 	$(INSTALLDIR) $(DESTDIR)$(sbindir)
 	$(INSTALL) $(REBOOTTOOL) $(DESTDIR)$(sbindir)/$(REBOOTTOOL)
+	$(INSTALLDIR) -d $(DESTDIR)$(oneshotdir)
+	$(INSTALL) -m 755 oneshot/* $(DESTDIR)$(oneshotdir)
 
 .PHONY: clean
 clean:
