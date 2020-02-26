@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -f "/usr/share/crash-reporter-settings/crash-reporter-privacy.conf" ]; then
+    sed -i "s/coredumping=false/coredumping=true/g" /usr/share/crash-reporter-settings/crash-reporter-privacy.conf
+fi

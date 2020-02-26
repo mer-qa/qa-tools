@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Script for adding files to prevent startup wizard and tutorial
+touch /home/nemo/.jolla-startupwizard-done
+touch /home/nemo/.jolla-startupwizard-usersession-done
+touch /home/nemo/.jolla-startupwizard-sfos2-tutorial
