@@ -1,6 +1,4 @@
 #!/bin/sh
 
-set -e
-
 # Script for setting default locale
-echo "LANG=en_GB.utf8" > /var/lib/environment/nemo/locale.conf
+echo "LANG=en_GB.utf8" > /etc/locale.conf
