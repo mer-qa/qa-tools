@@ -40,6 +40,7 @@ make %{?_smp_mflags}
 %files hooks
 %defattr(-,root,root,-)
 %{_oneshotdir}/*
+%{_sysconfdir}/sysctl.d/*
 
 %post hooks
 if [ "$1" -eq 1 ]; then

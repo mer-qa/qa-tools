@@ -14,6 +14,8 @@ INSTALLDIR = install -d
 sbindir = /usr/sbin
 # The directory to install oneshots
 oneshotdir = /usr/lib/oneshot.d
+# The directory to install sysctl
+sysctldir = /etc/sysctl.d
 
 .PHONY: all
 all: $(REBOOTTOOL)
@@ -27,6 +29,8 @@ install:
 	$(INSTALL) $(REBOOTTOOL) $(DESTDIR)$(sbindir)/$(REBOOTTOOL)
 	$(INSTALLDIR) -d $(DESTDIR)$(oneshotdir)
 	$(INSTALL) -m 755 oneshot/* $(DESTDIR)$(oneshotdir)
+	$(INSTALLDIR) -d $(DESTDIR)$(sysctldir)
+	$(INSTALL) sysctl/* $(DESTDIR)$(sysctldir)
 
 .PHONY: clean
 clean:
