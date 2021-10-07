@@ -41,6 +41,7 @@ make %{?_smp_mflags}
 %defattr(-,root,root,-)
 %{_oneshotdir}/*
 %{_sysconfdir}/sysctl.d/*
+%{_sysconfdir}/sailjail/config/*.conf
 
 %post hooks
 if [ "$1" -eq 1 ]; then
