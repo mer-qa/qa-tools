@@ -16,6 +16,8 @@ sbindir = /usr/sbin
 oneshotdir = /usr/lib/oneshot.d
 # The directory to install sysctl
 sysctldir = /etc/sysctl.d
+# The directory to install sailjail configs
+sailjailconfdir = /etc/sailjail/config
 
 .PHONY: all
 all: $(REBOOTTOOL)
@@ -31,6 +33,8 @@ install:
 	$(INSTALL) -m 755 oneshot/* $(DESTDIR)$(oneshotdir)
 	$(INSTALLDIR) -d $(DESTDIR)$(sysctldir)
 	$(INSTALL) sysctl/* $(DESTDIR)$(sysctldir)
+	$(INSTALLDIR) -d $(DESTDIR)$(sailjailconfdir)
+	$(INSTALL) sailjail/* $(DESTDIR)$(sailjailconfdir)
 
 .PHONY: clean
 clean:
