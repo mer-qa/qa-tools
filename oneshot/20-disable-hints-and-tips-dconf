@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Script for disabling hints and tips
+dconf write "/desktop/sailfish/silica/hints_enabled" false

@@ -47,5 +47,5 @@ make %{?_smp_mflags}
 if [ "$1" -eq 1 ]; then
     %{_bindir}/add-oneshot 10-enable-qa-repo 11-set-default-locale 14-enable-core-dumping
     %{_bindir}/add-oneshot --late 12-disable-als 13-set-max-brightness
-    %{_bindir}/add-oneshot --new-users 09-disable-startup-wizard 18-set-first-boot-dconf 19-set-time-format-dconf
+    %{_bindir}/add-oneshot --new-users 09-disable-startup-wizard 18-set-first-boot-dconf 19-set-time-format-dconf 20-disable-hints-and-tips-dconf
 fi
