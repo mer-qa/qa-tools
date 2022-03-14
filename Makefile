@@ -18,6 +18,8 @@ oneshotdir = /usr/lib/oneshot.d
 sysctldir = /etc/sysctl.d
 # The directory to install sailjail configs
 sailjailconfdir = /etc/sailjail/config
+# The directory to install mce configs
+mceconfdir = /etc/mce
 
 .PHONY: all
 all: $(REBOOTTOOL)
@@ -35,6 +37,8 @@ install:
 	$(INSTALL) sysctl/* $(DESTDIR)$(sysctldir)
 	$(INSTALLDIR) -d $(DESTDIR)$(sailjailconfdir)
 	$(INSTALL) sailjail/* $(DESTDIR)$(sailjailconfdir)
+	$(INSTALLDIR) -d $(DESTDIR)$(mceconfdir)
+	$(INSTALL) mce/*.conf $(DESTDIR)$(mceconfdir)
 
 .PHONY: clean
 clean:
