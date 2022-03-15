@@ -18,8 +18,6 @@ Requires(post): /usr/bin/ssu
 Requires: ssu
 Requires: jolla-preload-ambiences-default-ambience
 %{_oneshot_requires_post}
-# Removed in JB#49024 / JB#35113
-Obsoletes: jolla-firstsession-qa <= 0.50
 
 %description hooks
 %{summary}.
