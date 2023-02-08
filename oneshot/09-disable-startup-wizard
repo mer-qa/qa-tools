@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script for adding files to prevent startup wizard and tutorial
-touch ~/.jolla-startupwizard-done
-touch ~/.jolla-startupwizard-usersession-done
-touch ~/.jolla-startupwizard-sfos2-tutorial
+# Script for adding files to prevent startup wizard
+mkdir -p ~/.config
+touch ~/.config/jolla-startupwizard-done
+touch ~/.config/jolla-startupwizard-usersession-done
