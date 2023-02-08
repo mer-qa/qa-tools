@@ -20,10 +20,11 @@ int main(int argc, char *argv[])
     char *str1 = "bootloader";
     char *str2 = "recovery";
     char *str3 = "dnx";
+    char *str4 = "autodloader";
 
-    if ( argc != 2 || ( strcmp(str1, argv[1]) != 0 && strcmp(str2, argv[1]) != 0 && strcmp(str3, argv[1]) != 0) )
+    if ( argc != 2 || ( strcmp(str1, argv[1]) != 0 && strcmp(str2, argv[1]) != 0 && strcmp(str3, argv[1]) != 0 && strcmp(str4, argv[1]) != 0) )
     {
-        printf("Usage: \t\"%s %s\"\n \t\"%s %s\"\n \t\"%s %s\"\n", argv[0], str1, argv[0], str2, argv[0], str3);
+        printf("Usage: \t\"%s %s\"\n \t\"%s %s\"\n \t\"%s %s\"\n \t\"%s %s\"\n", argv[0], str1, argv[0], str2, argv[0], str3, argv[0], str4);
         return (EXIT_SUCCESS);
     }
 
